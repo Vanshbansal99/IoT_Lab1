@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'Robotics_kit.dart';
 import 'sensor_IoT.dart';
 void main() {
-  runApp(MyApp());
+  runApp(MyApp1());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
