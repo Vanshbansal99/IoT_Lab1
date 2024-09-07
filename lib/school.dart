@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'Robotics_kit.dart';
 import 'sensor_IoT.dart';
 void main() {
-  runApp(MyApp1());
+  runApp(MyApp());
 }
 
-class MyApp1 extends StatelessWidget {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,7 +16,7 @@ class MyApp1 extends StatelessWidget {
 }
 
 class schoolpage extends StatelessWidget {
-  const schoolpage({super.key});
+  // const schoolpage({super.key});
 
   // This widget is the root of your application.
   @override
