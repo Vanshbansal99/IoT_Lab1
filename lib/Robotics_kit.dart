@@ -1,3 +1,4 @@
+import 'package:Dashboard/school.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -45,7 +46,7 @@ class FirstPage extends StatelessWidget {
                       onTap:() {
                         //  Navigator.pop(context); 
                           Navigator.of(context).push(
-                         MaterialPageRoute(builder: (context)=> MyApp()) 
+                         MaterialPageRoute(builder: (context)=> schoolpage()) 
                         );
                         // Navigate to Home
                       },

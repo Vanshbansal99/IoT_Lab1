@@ -2,20 +2,26 @@ import 'package:flutter/material.dart';
 
 import 'Robotics_kit.dart';
 import 'sensor_IoT.dart';
-
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp1());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MyApp1 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: schoolpage(),
+    );
+  }
+}
+
+class schoolpage extends StatelessWidget {
+  const schoolpage({super.key});
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-     debugShowCheckedModeBanner: false,
-      home: Scaffold(
+    return  Scaffold(
         // backgroundColor: Color.fromARGB(255, 145, 132, 92),
         appBar: AppBar(
           backgroundColor:Color.fromARGB(255, 203, 206, 185) ,
@@ -49,7 +55,7 @@ class MyApp extends StatelessWidget {
                       onTap:() {
                         //  Navigator.pop(context); 
                           Navigator.of(context).push(
-                         MaterialPageRoute(builder: (context)=> MyApp()) 
+                         MaterialPageRoute(builder: (context)=> schoolpage()) 
                         );
                         // Navigate to Home
                       },
@@ -268,7 +274,7 @@ class MyApp extends StatelessWidget {
           
                 ),
         ),
-      ),);
+      );
   }
 }
 
