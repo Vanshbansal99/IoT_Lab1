@@ -73,6 +73,18 @@ class CPSLabSetupPage extends StatelessWidget {
                               color: Colors.black
                             ),),
                           ),
+                           ElevatedButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context,'/school');
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Color.fromARGB(255, 247, 216, 178),
+                            ),
+                            child: Text(
+                              'School page',
+                              style: TextStyle(color: Colors.black),
+                            ),
+                          ),
                           ElevatedButton(
                             onPressed: () {
                               Navigator.pushNamed(context, '/aboutUs');
