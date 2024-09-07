@@ -23,8 +23,14 @@ class FirsttPage extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
+           leading: IconButton(
+    icon: Icon(Icons.arrow_back),
+    onPressed: () {
+      Navigator.pop(context);
+    },
+  ),
         ),
-        drawer: Drawer(
+        endDrawer: Drawer(
           child: Container(
             color: Color.fromARGB(255, 203, 206, 185),
             child: ListView(

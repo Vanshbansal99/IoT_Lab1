@@ -40,7 +40,7 @@ class schoolpage extends StatelessWidget {
     },
   ),
         ),
-        drawer: Drawer(
+        endDrawer: Drawer(
           child: Container(
             color: Color.fromARGB(255, 203, 206, 185),
             child: ListView(
