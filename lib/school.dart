@@ -33,6 +33,12 @@ class schoolpage extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
+          leading: IconButton(
+    icon: Icon(Icons.arrow_back),
+    onPressed: () {
+      Navigator.pop(context);
+    },
+  ),
         ),
         drawer: Drawer(
           child: Container(
