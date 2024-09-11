@@ -190,7 +190,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 title: Text('CPS Lab Hardwares'),
                 onTap: () {
                   
-                     Navigator.pushNamed(context, '/home');
+                     Navigator.pushNamed(context, '/cps_lab_hardware');
                 },
               ),
               ListTile(
@@ -199,7 +199,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 title: Text('CPS Lab Tutorial'),
                 onTap: () {
                   
-                     Navigator.pushNamed(context, '/home');
+                     Navigator.pushNamed(context, '/cpsLab');
                 },
               ),
               ListTile(
@@ -208,7 +208,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 title: Text('School page'),
                 onTap: () {
                   
-                     Navigator.pushNamed(context, '/home');
+                     Navigator.pushNamed(context, '/school');
                 },
               ),
               ListTile(
@@ -217,7 +217,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 title: Text('About Us'),
                 onTap: () {
                   
-                     Navigator.pushNamed(context, '/home');
+                     Navigator.pushNamed(context, '/aboutUs');
                 },
               ),
             ],
