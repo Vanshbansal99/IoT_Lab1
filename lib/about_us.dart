@@ -89,7 +89,7 @@ class AboutUsPage extends StatelessWidget {
                               backgroundColor: Color.fromARGB(255, 247, 216, 178),
                             ),
                             child: Text(
-                              'School page',
+                              'School Module',
                               style: TextStyle(color: Colors.black),
                             ),
                           ),SizedBox(width:MediaQuery.of(context).size.width*0.02),
@@ -135,7 +135,7 @@ class AboutUsPage extends StatelessWidget {
               ),
               ListTile(
                 leading: 
-                Icon(Icons.dashboard),
+                Icon(Icons.home),
                 title: Text('Home'),
                 onTap: () {
                   
@@ -153,7 +153,7 @@ class AboutUsPage extends StatelessWidget {
               ),
               ListTile(
                 leading: 
-                Icon(Icons.dashboard, color: Theme.of(context).iconTheme.color),
+                Icon(Icons.category, color: Theme.of(context).iconTheme.color),
                 title: Text('CPS Lab Tutorial'),
                 onTap: () {
                   
@@ -162,8 +162,8 @@ class AboutUsPage extends StatelessWidget {
               ),
               ListTile(
                 leading: 
-                Icon(Icons.login_outlined),
-                title: Text('School page'),
+                Icon(Icons.school),
+                title: Text('School Module'),
                 onTap: () {
                   
                      Navigator.pushNamed(context, '/school');
@@ -171,7 +171,7 @@ class AboutUsPage extends StatelessWidget {
               ),
               ListTile(
                 leading: 
-                Icon(Icons.dashboard),
+                Icon(Icons.info),
                 title: Text('About Us'),
                 onTap: () {
                   

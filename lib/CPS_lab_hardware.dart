@@ -17,9 +17,166 @@ class CPSLabSetupPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+       appBar: AppBar(
+        // backgroundColor: Colors.white,
+        title: LayoutBuilder(
+          builder: (context, constraints) {
+            bool isMobile = constraints.maxWidth < 900;
+
+            return Row(
+              children: [
+                if (!isMobile) SizedBox(width: 50),
+                 Image.asset(
+                            'assets/images/awadhlogo.png',
+                            height: 50,
+                          ),
+                SizedBox(width: isMobile ? 8 : 16),
+
+                
+                
+                Spacer(),
+                if (!isMobile) ...[
+                  ElevatedButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/home');
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Color.fromARGB(255, 247, 216, 178),
+                            ),
+                            child: Text(
+                              'Home',
+                              style: TextStyle(color: Colors.black),
+                            ),
+                          ),
+                          SizedBox(width:MediaQuery.of(context).size.width*0.02),
+                          ElevatedButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/cps_lab_hardware');
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Color.fromARGB(255, 247, 216, 178),
+                            ),
+                            child: Text(
+                              'CPS Lab Hardwares',
+                              style: TextStyle(color: Colors.black),
+                            ),
+                          ),SizedBox(width:MediaQuery.of(context).size.width*0.02),
+                          ElevatedButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/cpsLab');
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Color.fromARGB(255, 247, 216, 178),
+                            ),
+                            child: Text(
+                              'CPS Lab Tutorial',
+                              style: TextStyle(color: Colors.black),
+                            ),
+                          ),SizedBox(width:MediaQuery.of(context).size.width*0.02),
+                          ElevatedButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context,'/school');
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Color.fromARGB(255, 247, 216, 178),
+                            ),
+                            child: Text(
+                              'School Module',
+                              style: TextStyle(color: Colors.black),
+                            ),
+                          ),SizedBox(width:MediaQuery.of(context).size.width*0.02),
+                           ElevatedButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/aboutUs');
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Color.fromARGB(255, 247, 216, 178),
+                            ),
+                            child: Text(
+                              'About Us',
+                              style: TextStyle(color: Colors.black),
+                            ),
+                          ),
+                ],
+                // if (isMobile)
+                  // IconButton(
+                    // icon: Icon(Icons.menu, color: Colors.white),
+                    // onPressed: () {
+                      // Scaffold.of(context).openDrawer();
+                    // },
+                  // ),
+              ],
+            );
+          },
+        ),
+      ),
+     endDrawer: Drawer(
+        child: Container(
+          color: Color.fromARGB(255, 247, 216, 178),
+          child: ListView(
+            // padding: EdgeInsets.zero,
+            children: [
+              DrawerHeader(
+                decoration: BoxDecoration(
+                  // color: Colors.grey[900],
+                ),
+                child:  Image.asset(
+                            'assets/images/awadhlogo.png',
+                            height: 50,
+                          ),
+              ),
+              ListTile(
+                leading: 
+                Icon(Icons.home),
+                title: Text('Home'),
+                onTap: () {
+                  
+                     Navigator.pushNamed(context, '/home');
+                },
+              ),
+              ListTile(
+                leading: 
+                Icon(Icons.dashboard),
+                title: Text('CPS Lab Hardwares'),
+                onTap: () {
+                  
+                     Navigator.pushNamed(context, '/cps_lab_hardware');
+                },
+              ),
+              ListTile(
+                leading: 
+                Icon(Icons.category, color: Theme.of(context).iconTheme.color),
+                title: Text('CPS Lab Tutorial'),
+                onTap: () {
+                  
+                     Navigator.pushNamed(context, '/cpsLab');
+                },
+              ),
+              ListTile(
+                leading: 
+                Icon(Icons.school),
+                title: Text('School Module'),
+                onTap: () {
+                  
+                     Navigator.pushNamed(context, '/school');
+                },
+              ),
+              ListTile(
+                leading: 
+                Icon(Icons.info),
+                title: Text('About Us'),
+                onTap: () {
+                  
+                     Navigator.pushNamed(context, '/aboutUs');
+                },
+              ),
+            ],
+          ),
+        ),
+      ),
       body: Column(
         children: [
-          Card(
+         /* Card(
                 elevation: 5,
                 margin: EdgeInsets.all(10),
                 
@@ -103,8 +260,8 @@ class CPSLabSetupPage extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-          AppBar(
+              ),*/
+         /* AppBar(
             title: Text(
               'CPS LAB HARDWARE SETUP',
               style: TextStyle(
@@ -113,7 +270,7 @@ class CPSLabSetupPage extends StatelessWidget {
                 color: Color.fromARGB(255, 81, 34, 3),
               ),
             ),
-          ),
+          ),*/
           Expanded(
             child: Container(
               decoration: BoxDecoration(
