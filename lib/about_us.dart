@@ -17,11 +17,176 @@ class AboutUsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+       appBar: AppBar(
+        // backgroundColor: Colors.white,
+        title: LayoutBuilder(
+          builder: (context, constraints) {
+            bool isMobile = constraints.maxWidth < 900;
+
+            return Row(
+              children: [
+                if (!isMobile) SizedBox(width: 50),
+                 Image.asset(
+                            'assets/images/awadhlogo.png',
+                            height: 50,
+                          ),SizedBox(width: 5,),
+                       Text(
+                'ABOUT US',
+                style: TextStyle(
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 81, 34, 3),
+                ),
+              ),
+                SizedBox(width: isMobile ? 8 : 16),
+
+                
+                
+                Spacer(),
+                if (!isMobile) ...[
+                  ElevatedButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/home');
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Color.fromARGB(255, 247, 216, 178),
+                            ),
+                            child: Text(
+                              'Home',
+                              style: TextStyle(color: Colors.black),
+                            ),
+                          ),
+                          SizedBox(width:MediaQuery.of(context).size.width*0.02),
+                          ElevatedButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/cps_lab_hardware');
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Color.fromARGB(255, 247, 216, 178),
+                            ),
+                            child: Text(
+                              'CPS Lab Hardwares',
+                              style: TextStyle(color: Colors.black),
+                            ),
+                          ),SizedBox(width:MediaQuery.of(context).size.width*0.02),
+                          ElevatedButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/cpsLab');
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Color.fromARGB(255, 247, 216, 178),
+                            ),
+                            child: Text(
+                              'CPS Lab Tutorial',
+                              style: TextStyle(color: Colors.black),
+                            ),
+                          ),SizedBox(width:MediaQuery.of(context).size.width*0.02),
+                          ElevatedButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context,'/school');
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Color.fromARGB(255, 247, 216, 178),
+                            ),
+                            child: Text(
+                              'School page',
+                              style: TextStyle(color: Colors.black),
+                            ),
+                          ),SizedBox(width:MediaQuery.of(context).size.width*0.02),
+                           ElevatedButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/aboutUs');
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Color.fromARGB(255, 247, 216, 178),
+                            ),
+                            child: Text(
+                              'About Us',
+                              style: TextStyle(color: Colors.black),
+                            ),
+                          ),
+                ],
+                // if (isMobile)
+                  // IconButton(
+                    // icon: Icon(Icons.menu, color: Colors.white),
+                    // onPressed: () {
+                      // Scaffold.of(context).openDrawer();
+                    // },
+                  // ),
+              ],
+            );
+          },
+        ),
+      ),
+      endDrawer: Drawer(
+        child: Container(
+          color: Color.fromARGB(255, 247, 216, 178),
+          child: ListView(
+            // padding: EdgeInsets.zero,
+            children: [
+              DrawerHeader(
+                decoration: BoxDecoration(
+                  // color: Colors.grey[900],
+                ),
+                child:  Image.asset(
+                            'assets/images/awadhlogo.png',
+                            height: 50,
+                          ),
+              ),
+              ListTile(
+                leading: 
+                Icon(Icons.dashboard),
+                title: Text('Home'),
+                onTap: () {
+                  
+                     Navigator.pushNamed(context, '/home');
+                },
+              ),
+              ListTile(
+                leading: 
+                Icon(Icons.dashboard),
+                title: Text('CPS Lab Hardwares'),
+                onTap: () {
+                  
+                     Navigator.pushNamed(context, '/cps_lab_hardware');
+                },
+              ),
+              ListTile(
+                leading: 
+                Icon(Icons.dashboard, color: Theme.of(context).iconTheme.color),
+                title: Text('CPS Lab Tutorial'),
+                onTap: () {
+                  
+                     Navigator.pushNamed(context, '/cpsLab');
+                },
+              ),
+              ListTile(
+                leading: 
+                Icon(Icons.login_outlined),
+                title: Text('School page'),
+                onTap: () {
+                  
+                     Navigator.pushNamed(context, '/school');
+                },
+              ),
+              ListTile(
+                leading: 
+                Icon(Icons.dashboard),
+                title: Text('About Us'),
+                onTap: () {
+                  
+                     Navigator.pushNamed(context, '/aboutUs');
+                },
+              ),
+            ],
+          ),
+        ),
+      ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Card(
+           /* Card(
                 elevation: 5,
                 margin: EdgeInsets.all(10),
                 
@@ -105,9 +270,9 @@ class AboutUsPage extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
+              ),*/
 
-            AppBar(
+            /*AppBar(
               title: Text(
                 'ABOUT US',
                 style: TextStyle(
@@ -116,7 +281,7 @@ class AboutUsPage extends StatelessWidget {
                   color: Color.fromARGB(255, 81, 34, 3),
                 ),
               ),
-            ),
+            ),*/
 
             Container(
               decoration: BoxDecoration(
