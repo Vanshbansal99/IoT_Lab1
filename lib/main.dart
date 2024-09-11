@@ -16,6 +16,10 @@ import 'sensor.dart';
 import 'school.dart';
 
 
+// import 'package:flutter/material.dart';
+// import 'package:carousel_slider/carousel_slider.dart';
+
+
 void main() {
   runApp(MyApp());
 }
@@ -63,32 +67,189 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
+       appBar: AppBar(
+        // backgroundColor: Colors.white,
+        title: LayoutBuilder(
+          builder: (context, constraints) {
+            bool isMobile = constraints.maxWidth < 900;
+
+            return Row(
+              children: [
+                if (!isMobile) SizedBox(width: 50),
+                 Image.asset(
+                            'assets/images/awadhlogo.png',
+                            height: 50,
+                          ),
+                SizedBox(width: isMobile ? 8 : 16),
+
+                
+                
+                Spacer(),
+                if (!isMobile) ...[
+                  ElevatedButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/home');
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Color.fromARGB(255, 247, 216, 178),
+                            ),
+                            child: Text(
+                              'Home',
+                              style: TextStyle(color: Colors.black),
+                            ),
+                          ),
+                          SizedBox(width:MediaQuery.of(context).size.width*0.02),
+                          ElevatedButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/cps_lab_hardware');
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Color.fromARGB(255, 247, 216, 178),
+                            ),
+                            child: Text(
+                              'CPS Lab Hardwares',
+                              style: TextStyle(color: Colors.black),
+                            ),
+                          ),SizedBox(width:MediaQuery.of(context).size.width*0.02),
+                          ElevatedButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/cpsLab');
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Color.fromARGB(255, 247, 216, 178),
+                            ),
+                            child: Text(
+                              'CPS Lab Tutorial',
+                              style: TextStyle(color: Colors.black),
+                            ),
+                          ),SizedBox(width:MediaQuery.of(context).size.width*0.02),
+                          ElevatedButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context,'/school');
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Color.fromARGB(255, 247, 216, 178),
+                            ),
+                            child: Text(
+                              'School page',
+                              style: TextStyle(color: Colors.black),
+                            ),
+                          ),SizedBox(width:MediaQuery.of(context).size.width*0.02),
+                           ElevatedButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/aboutUs');
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Color.fromARGB(255, 247, 216, 178),
+                            ),
+                            child: Text(
+                              'About Us',
+                              style: TextStyle(color: Colors.black),
+                            ),
+                          ),
+                ],
+                // if (isMobile)
+                  // IconButton(
+                    // icon: Icon(Icons.menu, color: Colors.white),
+                    // onPressed: () {
+                      // Scaffold.of(context).openDrawer();
+                    // },
+                  // ),
+              ],
+            );
+          },
+        ),
+      ),
+      endDrawer: Drawer(
+        child: Container(
+          color: Color.fromARGB(255, 247, 216, 178),
+          child: ListView(
+            // padding: EdgeInsets.zero,
+            children: [
+              DrawerHeader(
+                decoration: BoxDecoration(
+                  // color: Colors.grey[900],
+                ),
+                child:  Image.asset(
+                            'assets/images/awadhlogo.png',
+                            height: 50,
+                          ),
+              ),
+              ListTile(
+                leading: 
+                Icon(Icons.dashboard),
+                title: Text('Home'),
+                onTap: () {
+                  
+                     Navigator.pushNamed(context, '/home');
+                },
+              ),
+              ListTile(
+                leading: 
+                Icon(Icons.dashboard),
+                title: Text('CPS Lab Hardwares'),
+                onTap: () {
+                  
+                     Navigator.pushNamed(context, '/home');
+                },
+              ),
+              ListTile(
+                leading: 
+                Icon(Icons.dashboard, color: Theme.of(context).iconTheme.color),
+                title: Text('CPS Lab Tutorial'),
+                onTap: () {
+                  
+                     Navigator.pushNamed(context, '/home');
+                },
+              ),
+              ListTile(
+                leading: 
+                Icon(Icons.login_outlined),
+                title: Text('School page'),
+                onTap: () {
+                  
+                     Navigator.pushNamed(context, '/home');
+                },
+              ),
+              ListTile(
+                leading: 
+                Icon(Icons.dashboard),
+                title: Text('About Us'),
+                onTap: () {
+                  
+                     Navigator.pushNamed(context, '/home');
+                },
+              ),
+            ],
+          ),
+        ),
+      ),
+        body:
+        Container(
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage('./../assets/assets/images/back_front_new.png'),
             fit: BoxFit.cover,
           ),
         ),
-        
-        child: SingleChildScrollView(
+        child:  SingleChildScrollView(
           physics: AlwaysScrollableScrollPhysics(),
           scrollDirection: Axis.vertical,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Container(
-                margin: EdgeInsets.only(top: 90, left:165, right: 165),
+             /* Container(
+                // margin: EdgeInsets.only(top: 90, left:165, right: 165),
                 child: 
               Card(
-                elevation: 5,
+                // elevation: 5,
                 margin: EdgeInsets.all(10),
 
                 child: Stack(
                   children: [
-                    Padding(
-                      padding: EdgeInsets.all(10),
-                      child: Row(
+                    // Padding(
+                      // padding: EdgeInsets.all(10),
+                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           Image.asset(
@@ -157,20 +318,20 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                         ],
                       ),
-                    ),
+                    // ),
                   ],
                 ),
               ),
-              ),
+              ),*/
               
-              SizedBox(height: 10),
+              // SizedBox(height: 10),
               Container(
                 margin: EdgeInsets.only(left: 20, right: 20),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    SizedBox(height: 5),
+                    SizedBox(height: 30),
 
                     Text(
                       'Agriculture & Water Technology Development Hub (AWaDH)',
@@ -182,7 +343,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ),
                     SizedBox(height: 20),
-                    CarouselSlider(
+                    
+                   CarouselSlider(
                       carouselController: _carouselController,
                       options: CarouselOptions(
                         
@@ -224,14 +386,14 @@ class _MyHomePageState extends State<MyHomePage> {
                       ).toList(),
                     ),
              Container(
-                margin: EdgeInsets.only(bottom: 170, left:165, right: 165),
+                margin: EdgeInsets.only(bottom: 170, left:MediaQuery.of(context).size.width*0.1, right:MediaQuery.of(context).size.width*0.1 ),
                 child: 
               
               
                
 
-                 Stack(
-                  children: [
+                //  Stack(
+                  // children: [
                     Padding(
                       padding: EdgeInsets.all(10),
                       child: Row(
@@ -269,8 +431,8 @@ class _MyHomePageState extends State<MyHomePage> {
                         ],
                       ),
                     ),
-                  ],
-                ),
+                  // ],
+                // ),
               
               ), 
           
@@ -280,7 +442,7 @@ class _MyHomePageState extends State<MyHomePage> {
   
 
                   ],
-  ),
+  ),),
 ),
 
 
@@ -288,7 +450,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
 
             
-          ),
+          // ),
         );
             
       
