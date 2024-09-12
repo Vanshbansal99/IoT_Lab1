@@ -336,9 +336,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          SizedBox(height: 30),
+                          // SizedBox(height: 30),
               
-                          Text(
+                          /*Text(
                             'Agriculture & Water Technology Development Hub (AWaDH)',
                             style: TextStyle(
                               fontFamily: 'FontMain',
@@ -346,7 +346,17 @@ class _MyHomePageState extends State<MyHomePage> {
                               fontWeight: FontWeight.bold,
                               color: const Color.fromARGB(255, 0, 0, 0),
                             ),
-                          ),
+                          ),*/
+                          Padding(padding: EdgeInsets.all(8.0),
+                    child: Container(
+                      height: 250,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage('assets/images/Awadh.PNG'),
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                    ),),
                           SizedBox(height: 20),
                           
                          CarouselSlider(
