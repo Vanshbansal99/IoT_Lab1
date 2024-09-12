@@ -230,12 +230,12 @@ class _MyHomePageState extends State<MyHomePage> {
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage('./../assets/assets/images/bg_main.png'),
-            fit: BoxFit.cover,
+            fit: BoxFit.contain,
           ),
         ),
         child:  SingleChildScrollView(
-          physics: AlwaysScrollableScrollPhysics(),
-          scrollDirection: Axis.vertical,
+          // physics: AlwaysScrollableScrollPhysics(),
+          // scrollDirection: Axis.vertical,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -326,9 +326,9 @@ class _MyHomePageState extends State<MyHomePage> {
               ),*/
               
               // SizedBox(height: 10),
-              Container(
-                // height: MediaQuery.of(context).size.height-20,
-                margin: EdgeInsets.only(left: 20, right: 20),
+              Padding(
+                padding:EdgeInsets.all(8.0),
+                // margin: EdgeInsets.only(left: 20, right: 20),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,

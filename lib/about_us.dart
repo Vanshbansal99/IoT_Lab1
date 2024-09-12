@@ -281,7 +281,7 @@ class AboutUsPage extends StatelessWidget {
                 image: DecorationImage(
                   image: AssetImage(
                       'assets/images/About_us_page_final.png'), // Replace with your background image path
-                  fit: BoxFit.cover,
+                  fit: BoxFit.contain,
                 ),
               ),
               child: Padding(
