@@ -18,8 +18,8 @@ class CPSlab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        // backgroundColor: Colors.white,
+     appBar: AppBar(
+        backgroundColor:Color.fromARGB(255, 240, 216, 186) ,
         title: LayoutBuilder(
           builder: (context, constraints) {
             bool isMobile = constraints.maxWidth < 900;
@@ -31,6 +31,11 @@ class CPSlab extends StatelessWidget {
                             'assets/images/awadhlogo.png',
                             height: 50,
                           ),
+                          SizedBox(width: 10,),
+                          Text(
+                              'CPS Lab Tutorial',
+                              style: TextStyle(color: Colors.black),
+                            ),
                 SizedBox(width: isMobile ? 8 : 16),
 
                 
@@ -42,7 +47,7 @@ class CPSlab extends StatelessWidget {
                               Navigator.pushNamed(context, '/home');
                             },
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Color.fromARGB(255, 247, 216, 178),
+                              backgroundColor: Color.fromARGB(255, 236, 212, 182),
                             ),
                             child: Text(
                               'Home',
@@ -55,7 +60,7 @@ class CPSlab extends StatelessWidget {
                               Navigator.pushNamed(context, '/cps_lab_hardware');
                             },
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Color.fromARGB(255, 247, 216, 178),
+                              backgroundColor:  Color.fromARGB(255, 236, 212, 182),
                             ),
                             child: Text(
                               'CPS Lab Hardwares',
@@ -67,7 +72,7 @@ class CPSlab extends StatelessWidget {
                               Navigator.pushNamed(context, '/cpsLab');
                             },
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Color.fromARGB(255, 247, 216, 178),
+                              backgroundColor:  Color.fromARGB(255, 236, 212, 182),
                             ),
                             child: Text(
                               'CPS Lab Tutorial',
@@ -79,7 +84,7 @@ class CPSlab extends StatelessWidget {
                               Navigator.pushNamed(context,'/school');
                             },
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Color.fromARGB(255, 247, 216, 178),
+                              backgroundColor: Color.fromARGB(255, 236, 212, 182),
                             ),
                             child: Text(
                               'School Module',
@@ -91,7 +96,7 @@ class CPSlab extends StatelessWidget {
                               Navigator.pushNamed(context, '/aboutUs');
                             },
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Color.fromARGB(255, 247, 216, 178),
+                              backgroundColor: Color.fromARGB(255, 236, 212, 182),
                             ),
                             child: Text(
                               'About Us',
@@ -111,7 +116,7 @@ class CPSlab extends StatelessWidget {
           },
         ),
       ),
-      endDrawer: Drawer(
+     endDrawer: Drawer(
         child: Container(
           color: Color.fromARGB(255, 247, 216, 178),
           child: ListView(

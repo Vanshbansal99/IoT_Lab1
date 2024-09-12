@@ -68,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
        appBar: AppBar(
-        // backgroundColor: Colors.white,
+        backgroundColor:Color.fromARGB(255, 240, 216, 186) ,
         title: LayoutBuilder(
           builder: (context, constraints) {
             bool isMobile = constraints.maxWidth < 900;
@@ -91,7 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               Navigator.pushNamed(context, '/home');
                             },
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Color.fromARGB(255, 247, 216, 178),
+                              backgroundColor: Color.fromARGB(255, 236, 212, 182),
                             ),
                             child: Text(
                               'Home',
@@ -104,7 +104,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               Navigator.pushNamed(context, '/cps_lab_hardware');
                             },
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Color.fromARGB(255, 247, 216, 178),
+                              backgroundColor:  Color.fromARGB(255, 236, 212, 182),
                             ),
                             child: Text(
                               'CPS Lab Hardwares',
@@ -116,7 +116,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               Navigator.pushNamed(context, '/cpsLab');
                             },
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Color.fromARGB(255, 247, 216, 178),
+                              backgroundColor:  Color.fromARGB(255, 236, 212, 182),
                             ),
                             child: Text(
                               'CPS Lab Tutorial',
@@ -128,7 +128,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               Navigator.pushNamed(context,'/school');
                             },
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Color.fromARGB(255, 247, 216, 178),
+                              backgroundColor: Color.fromARGB(255, 236, 212, 182),
                             ),
                             child: Text(
                               'School Module',
@@ -140,7 +140,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               Navigator.pushNamed(context, '/aboutUs');
                             },
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Color.fromARGB(255, 247, 216, 178),
+                              backgroundColor: Color.fromARGB(255, 236, 212, 182),
                             ),
                             child: Text(
                               'About Us',
@@ -226,9 +226,10 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
         body:
         Container(
+          height: MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('./../assets/assets/images/back_front_new.png'),
+            image: AssetImage('./../assets/assets/images/bg_main.png'),
             fit: BoxFit.cover,
           ),
         ),
@@ -326,6 +327,7 @@ class _MyHomePageState extends State<MyHomePage> {
               
               // SizedBox(height: 10),
               Container(
+                height: MediaQuery.of(context).size.height-20,
                 margin: EdgeInsets.only(left: 20, right: 20),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
