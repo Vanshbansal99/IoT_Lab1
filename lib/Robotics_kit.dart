@@ -52,7 +52,7 @@ class FirstPage extends StatelessWidget {
                       onTap:() {
                         //  Navigator.pop(context); 
                           Navigator.of(context).push(
-                         MaterialPageRoute(builder: (context)=> MyApp1()) 
+                         MaterialPageRoute(builder: (context)=> schoolpage()) 
                         );
                         // Navigate to Home
                       },
