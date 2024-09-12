@@ -24,8 +24,14 @@ class FirstPage extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
+          leading: IconButton(
+    icon: Icon(Icons.arrow_back),
+    onPressed: () {
+      Navigator.pop(context);
+    },
+  ),
         ),
-        drawer: Drawer(
+        endDrawer: Drawer(
           child: Container(
             color: Color.fromARGB(255, 203, 206, 185),
             child: ListView(
@@ -46,7 +52,7 @@ class FirstPage extends StatelessWidget {
                       onTap:() {
                         //  Navigator.pop(context); 
                           Navigator.of(context).push(
-                         MaterialPageRoute(builder: (context)=> MyApp()) 
+                         MaterialPageRoute(builder: (context)=> MyApp1()) 
                         );
                         // Navigate to Home
                       },
