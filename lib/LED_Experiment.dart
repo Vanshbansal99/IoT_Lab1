@@ -52,8 +52,57 @@ class _LEDexperimentState extends State<LEDexperiment> {
     return Scaffold(
       appBar: AppBar(
         title: Text('LED and Button Experiments'),
-        actions: [
-          TextButton(
+        // actions: [
+        //   TextButton(
+        //     onPressed: () => _openPdf(0),
+        //     child: Text(
+        //       'EXP 1',
+        //       style: TextStyle(color: Colors.blue),
+        //     ),
+        //   ),
+        //   TextButton(
+        //     onPressed: () => _openPdf(1),
+        //     child: Text(
+        //       'EXP 2',
+        //       style: TextStyle(color: Colors.blue),
+        //     ),
+        //   ),
+        //   TextButton(
+        //     onPressed: () => _openPdf(2),
+        //     child: Text(
+        //       'EXP 3',
+        //       style: TextStyle(color: Colors.blue),
+        //     ),
+        //   ),
+        //   TextButton(
+        //     onPressed: () => _openPdf(3),
+        //     child: Text(
+        //       'EXP 4',
+        //       style: TextStyle(color: Colors.blue),
+        //     ),
+        //   ),
+        //   TextButton(
+        //     onPressed: () => _openPdf(4),
+        //     child: Text(
+        //       'EXP 5',
+        //       style: TextStyle(color: Colors.blue),
+        //     ),
+        //   ),
+        //   TextButton(
+        //     onPressed: () => _openPdf(5),
+        //     child: Text(
+        //       'EXP 6',
+        //       style: TextStyle(color: Colors.blue),
+        //     ),
+        //   ),
+        // ],
+      ),
+      
+      body: Column(
+        children: [
+          Card(
+            child: Row(children: [
+              TextButton(
             onPressed: () => _openPdf(0),
             child: Text(
               'EXP 1',
@@ -95,11 +144,8 @@ class _LEDexperimentState extends State<LEDexperiment> {
               style: TextStyle(color: Colors.blue),
             ),
           ),
-        ],
-      ),
-      
-      body: Column(
-        children: [
+            ],),
+          ),
           Expanded(
             child: SfPdfViewer.asset(
               pdfUrls[_selectedPdfIndex],

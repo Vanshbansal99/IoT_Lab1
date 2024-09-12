@@ -312,7 +312,7 @@ class _ImageGridState extends State<ImageGrid> {
             physics: NeverScrollableScrollPhysics(),
             padding: EdgeInsets.all(8),
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 4, // Three images per row
+              crossAxisCount: MediaQuery.of(context).size.width < 900 ?1:4, // Three images per row
               crossAxisSpacing: 8, // Space between columns
               mainAxisSpacing: 8,  // Space between rows
               childAspectRatio: 1.5, // Adjust for the shape you want
