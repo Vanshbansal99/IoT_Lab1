@@ -230,7 +230,7 @@ class _MyHomePageState extends State<MyHomePage> {
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage('./../assets/assets/images/bg_main.png'),
-            fit: BoxFit.fill,
+            fit: BoxFit.cover,
           ),
         ),
         child:  SingleChildScrollView(
