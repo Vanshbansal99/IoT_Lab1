@@ -342,7 +342,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             'Agriculture & Water Technology Development Hub (AWaDH)',
                             style: TextStyle(
                               fontFamily: 'FontMain',
-                              fontSize: 40,
+                              fontSize: MediaQuery.of(context).size.width < 900 ?40:65,
                               fontWeight: FontWeight.bold,
                               color: const Color.fromARGB(255, 0, 0, 0),
                             ),
