@@ -226,11 +226,12 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
         body:
         Container(
-          height: MediaQuery.of(context).size.height,
+          // height: MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('./../assets/assets/images/bg_main.png'),
+            image: AssetImage('./../assets/assets/images/bg_main.png',),
             fit: BoxFit.cover,
+           
           ),
         ),
         child:  SingleChildScrollView(

@@ -276,7 +276,7 @@ class AboutUsPage extends StatelessWidget {
             ),*/
 
             Container(
-              height: MediaQuery.of(context).size.height,
+              // height: MediaQuery.of(context).size.height,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
