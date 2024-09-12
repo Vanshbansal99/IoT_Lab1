@@ -79,7 +79,11 @@ class _MyHomePageState extends State<MyHomePage> {
                  Image.asset(
                             'assets/images/awadhlogo.png',
                             height: 50,
-                          ),
+                          ), SizedBox(width: 10,),
+                           Text(
+                              'CPS Lab',
+                              style: TextStyle(color: Colors.black),
+                            ),
                 SizedBox(width: isMobile ? 8 : 16),
 
                 

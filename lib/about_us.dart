@@ -29,7 +29,11 @@ class AboutUsPage extends StatelessWidget {
                  Image.asset(
                             'assets/images/awadhlogo.png',
                             height: 50,
-                          ),
+                          ), SizedBox(width: 10,),
+                           Text(
+                              'About Us',
+                              style: TextStyle(color: Colors.black),
+                            ),
                 SizedBox(width: isMobile ? 8 : 16),
 
                 
