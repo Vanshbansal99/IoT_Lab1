@@ -24,15 +24,8 @@ class FirstPage extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
-           leading: IconButton(
-    icon: Icon(Icons.arrow_back),
-    onPressed: () {
-      Navigator.pop(context);
-    },
-  ),
-          
         ),
-        endDrawer: Drawer(
+        drawer: Drawer(
           child: Container(
             color: Color.fromARGB(255, 203, 206, 185),
             child: ListView(
@@ -53,7 +46,7 @@ class FirstPage extends StatelessWidget {
                       onTap:() {
                         //  Navigator.pop(context); 
                           Navigator.of(context).push(
-                         MaterialPageRoute(builder: (context)=> schoolpage()) 
+                         MaterialPageRoute(builder: (context)=> MyApp()) 
                         );
                         // Navigate to Home
                       },
@@ -105,10 +98,10 @@ class FirstPage extends StatelessWidget {
           Container(
              decoration: BoxDecoration(
   image: DecorationImage(
-    image: AssetImage('assets/images/robobg.png'), // Replace with your image asset
+    image: AssetImage('assets/images/robobg2.png'), // Replace with your image asset
     fit: BoxFit.cover, // This will cover the entire background
     colorFilter: ColorFilter.mode(
-      Colors.black.withOpacity(0.5), // Adjust the opacity here
+      Colors.black.withOpacity(0.7), // Adjust the opacity here
       BlendMode.dstATop,
     ),
   ),
@@ -319,13 +312,13 @@ class _ImageGridState extends State<ImageGrid> {
         Align(
           alignment: Alignment.center,
           child: Card(
-            color: Color.fromARGB(255, 203, 206, 185).withOpacity(0.5) ,
+            color: Colors.white.withOpacity(0.6) ,
             child: Image.asset('assets/images/robokit.png',
             fit:BoxFit.contain ,),
           ),
         ),
           Card(
-             color: Color.fromARGB(255, 203, 206, 185).withOpacity(0.5) ,
+             color: Colors.white.withOpacity(0.6) ,
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 16.0),
               child: Text(
@@ -410,7 +403,7 @@ class _ImageGridState extends State<ImageGrid> {
                   );
                 },
                 child: Card(
-                   color: Color.fromARGB(255, 203, 206, 185).withOpacity(0.5),
+                   color: Colors.white.withOpacity(0.5),
                   elevation: 5,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15),
@@ -449,7 +442,7 @@ class _ImageGridState extends State<ImageGrid> {
             },
           ),
            Card(
-            color: Colors.black.withOpacity(0.5),
+            color: Colors.white.withOpacity(0.5),
 
              child: Container(
               width: screenWidth,
@@ -485,7 +478,7 @@ class _ImageGridState extends State<ImageGrid> {
                   ),
                 ),
               ),*/
-              Card(color: Color.fromARGB(255, 203, 206, 185).withOpacity(0.5),
+              Card(color: Colors.white.withOpacity(0.5),
 
                 child: Container(
                   width: screenWidth,
@@ -520,7 +513,7 @@ class HardwareDescriptionTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: Color.fromARGB(255, 203, 206, 185).withOpacity(0.5),
+      color: Colors.white.withOpacity(0.5),
       margin: EdgeInsets.only(bottom: 16.0),
       elevation: 2.0,
       child: ExpansionTile(
