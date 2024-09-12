@@ -234,218 +234,224 @@ class _MyHomePageState extends State<MyHomePage> {
            
           ),
         ),
-        child:  SingleChildScrollView(
-          physics: AlwaysScrollableScrollPhysics(),
-          scrollDirection: Axis.vertical,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-             /* Container(
-                // margin: EdgeInsets.only(top: 90, left:165, right: 165),
-                child: 
-              Card(
-                // elevation: 5,
-                margin: EdgeInsets.all(10),
-
-                child: Stack(
-                  children: [
-                    // Padding(
-                      // padding: EdgeInsets.all(10),
-                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Image.asset(
-                            'assets/images/awadhlogo.png',
-                            height: 65,
-                          ),
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, '/home');
-                            },
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Color.fromARGB(255, 247, 216, 178),
-                            ),
-                            child: Text(
-                              'Home',
-                              style: TextStyle(color: Colors.black),
-                            ),
-                          ),
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, '/cps_lab_hardware');
-                            },
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Color.fromARGB(255, 247, 216, 178),
-                            ),
-                            child: Text(
-                              'CPS Lab Hardwares',
-                              style: TextStyle(color: Colors.black),
-                            ),
-                          ),
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, '/cpsLab');
-                            },
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Color.fromARGB(255, 247, 216, 178),
-                            ),
-                            child: Text(
-                              'CPS Lab Tutorial',
-                              style: TextStyle(color: Colors.black),
-                            ),
-                          ),
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context,'/school');
-                            },
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Color.fromARGB(255, 247, 216, 178),
-                            ),
-                            child: Text(
-                              'School page',
-                              style: TextStyle(color: Colors.black),
-                            ),
-                          ),
-                           ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, '/aboutUs');
-                            },
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Color.fromARGB(255, 247, 216, 178),
-                            ),
-                            child: Text(
-                              'About Us',
-                              style: TextStyle(color: Colors.black),
-                            ),
-                          ),
-                        ],
-                      ),
-                    // ),
-                  ],
-                ),
-              ),
-              ),*/
-              
-              // SizedBox(height: 10),
-              Container(
-                height: MediaQuery.of(context).size.height-20,
-                margin: EdgeInsets.only(left: 20, right: 20),
+        child:  Column(
+          children: [
+            Expanded(
+              child: SingleChildScrollView(
+                physics: AlwaysScrollableScrollPhysics(),
+                scrollDirection: Axis.vertical,
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    SizedBox(height: 30),
-
-                    Text(
-                      'Agriculture & Water Technology Development Hub (AWaDH)',
-                      style: TextStyle(
-                        fontFamily: 'FontMain',
-                        fontSize: 40,
-                        fontWeight: FontWeight.bold,
-                        color: const Color.fromARGB(255, 0, 0, 0),
-                      ),
-                    ),
-                    SizedBox(height: 20),
-                    
-                   CarouselSlider(
-                      carouselController: _carouselController,
-                      options: CarouselOptions(
-                        
-                        height: 400,
-                        aspectRatio: 16 / 9,
-                        autoPlay: false,
-                        enlargeCenterPage: true,
-                      ),
-                      items: [
-                        'front_foto-removebg-preview.png',
-                        'Awadh_logo_New-removebg-preview.png',
-                        'New_deployment_pic-removebg-preview.png',
-                        'Iot_logo_Picture_final-removebg-preview.png',
-                        'home_page_1.png',
-                        'home_page_2.png',
-                        'home_page_3.png',
-                        'home_page_4.png',
-
-                      ].map((image) {
-                        return Builder(
-                          
-                          builder: (BuildContext context) {
-                                 
-
-                            return Container(
-                              width: MediaQuery.of(context).size.width,
-                              margin: EdgeInsets.symmetric(horizontal: 5.0),
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                  image: AssetImage(
-                                    './../assets/assets/images/$image',
+                   /* Container(
+                      // margin: EdgeInsets.only(top: 90, left:165, right: 165),
+                      child: 
+                    Card(
+                      // elevation: 5,
+                      margin: EdgeInsets.all(10),
+              
+                      child: Stack(
+                        children: [
+                          // Padding(
+                            // padding: EdgeInsets.all(10),
+                             Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Image.asset(
+                                  'assets/images/awadhlogo.png',
+                                  height: 65,
+                                ),
+                                ElevatedButton(
+                                  onPressed: () {
+                                    Navigator.pushNamed(context, '/home');
+                                  },
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Color.fromARGB(255, 247, 216, 178),
+                                  ),
+                                  child: Text(
+                                    'Home',
+                                    style: TextStyle(color: Colors.black),
                                   ),
                                 ),
-                              ),
-                            );
-                          },
-                        );
-                      },
-                      ).toList(),
-                    ),
-             Container(
-                margin: EdgeInsets.only(bottom: 170, left:MediaQuery.of(context).size.width*0.1, right:MediaQuery.of(context).size.width*0.1 ),
-                child: 
-              
-              
-               
-
-                //  Stack(
-                  // children: [
-                    Padding(
-                      padding: EdgeInsets.all(10),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, '/sensors');
-                            },
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Color.fromARGB(255, 255, 255, 255),
+                                ElevatedButton(
+                                  onPressed: () {
+                                    Navigator.pushNamed(context, '/cps_lab_hardware');
+                                  },
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Color.fromARGB(255, 247, 216, 178),
+                                  ),
+                                  child: Text(
+                                    'CPS Lab Hardwares',
+                                    style: TextStyle(color: Colors.black),
+                                  ),
+                                ),
+                                ElevatedButton(
+                                  onPressed: () {
+                                    Navigator.pushNamed(context, '/cpsLab');
+                                  },
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Color.fromARGB(255, 247, 216, 178),
+                                  ),
+                                  child: Text(
+                                    'CPS Lab Tutorial',
+                                    style: TextStyle(color: Colors.black),
+                                  ),
+                                ),
+                                ElevatedButton(
+                                  onPressed: () {
+                                    Navigator.pushNamed(context,'/school');
+                                  },
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Color.fromARGB(255, 247, 216, 178),
+                                  ),
+                                  child: Text(
+                                    'School page',
+                                    style: TextStyle(color: Colors.black),
+                                  ),
+                                ),
+                                 ElevatedButton(
+                                  onPressed: () {
+                                    Navigator.pushNamed(context, '/aboutUs');
+                                  },
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Color.fromARGB(255, 247, 216, 178),
+                                  ),
+                                  child: Text(
+                                    'About Us',
+                                    style: TextStyle(color: Colors.black),
+                                  ),
+                                ),
+                              ],
                             ),
-                            child: Text(
-                              'SENSORS',
-                              style: TextStyle(color: Colors.black,
-                               fontWeight: FontWeight.bold),
-                              
-                            ),
-                          ),
-                          SizedBox(width: 50),
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, '/ContactUS');
-                            },
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Color.fromARGB(255, 255, 255, 255),
-                            ),
-                            child: Text(
-                              'Contact Us',
-                              style: TextStyle(color: Colors.black),
-                            ),
-                          ),
-                          
+                          // ),
                         ],
                       ),
                     ),
-                  // ],
-                // ),
+                    ),*/
+                    
+                    // SizedBox(height: 10),
+                    Container(
+                      height: MediaQuery.of(context).size.height-20,
+                      margin: EdgeInsets.only(left: 20, right: 20),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          SizedBox(height: 30),
               
-              ), 
-          
-        ],
-              ),
-              ),
-  
-
-                  ],
-  ),),
+                          Text(
+                            'Agriculture & Water Technology Development Hub (AWaDH)',
+                            style: TextStyle(
+                              fontFamily: 'FontMain',
+                              fontSize: 40,
+                              fontWeight: FontWeight.bold,
+                              color: const Color.fromARGB(255, 0, 0, 0),
+                            ),
+                          ),
+                          SizedBox(height: 20),
+                          
+                         CarouselSlider(
+                            carouselController: _carouselController,
+                            options: CarouselOptions(
+                              
+                              height: 400,
+                              aspectRatio: 16 / 9,
+                              autoPlay: false,
+                              enlargeCenterPage: true,
+                            ),
+                            items: [
+                              'front_foto-removebg-preview.png',
+                              'Awadh_logo_New-removebg-preview.png',
+                              'New_deployment_pic-removebg-preview.png',
+                              'Iot_logo_Picture_final-removebg-preview.png',
+                              'home_page_1.png',
+                              'home_page_2.png',
+                              'home_page_3.png',
+                              'home_page_4.png',
+              
+                            ].map((image) {
+                              return Builder(
+                                
+                                builder: (BuildContext context) {
+                                       
+              
+                                  return Container(
+                                    width: MediaQuery.of(context).size.width,
+                                    margin: EdgeInsets.symmetric(horizontal: 5.0),
+                                    decoration: BoxDecoration(
+                                      image: DecorationImage(
+                                        image: AssetImage(
+                                          './../assets/assets/images/$image',
+                                        ),
+                                      ),
+                                    ),
+                                  );
+                                },
+                              );
+                            },
+                            ).toList(),
+                          ),
+                   Container(
+                      margin: EdgeInsets.only(bottom: 170, left:MediaQuery.of(context).size.width*0.1, right:MediaQuery.of(context).size.width*0.1 ),
+                      child: 
+                    
+                    
+                     
+              
+                      //  Stack(
+                        // children: [
+                          Padding(
+                            padding: EdgeInsets.all(10),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                
+                                ElevatedButton(
+                                  onPressed: () {
+                                    Navigator.pushNamed(context, '/sensors');
+                                  },
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Color.fromARGB(255, 255, 255, 255),
+                                  ),
+                                  child: Text(
+                                    'SENSORS',
+                                    style: TextStyle(color: Colors.black,
+                                     fontWeight: FontWeight.bold),
+                                    
+                                  ),
+                                ),
+                                SizedBox(width: 50),
+                                ElevatedButton(
+                                  onPressed: () {
+                                    Navigator.pushNamed(context, '/ContactUS');
+                                  },
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Color.fromARGB(255, 255, 255, 255),
+                                  ),
+                                  child: Text(
+                                    'Contact Us',
+                                    style: TextStyle(color: Colors.black),
+                                  ),
+                                ),
+                                
+                              ],
+                            ),
+                          ),
+                        // ],
+                      // ),
+                    
+                    ), 
+                
+              ],
+                    ),
+                    ),
+                
+              
+                        ],
+                ),),
+            ),
+          ],
+        ),
 ),
 
 
